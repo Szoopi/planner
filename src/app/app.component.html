@@ -177,7 +177,7 @@
 
 <main class="main">
   <div cdkDropListGroup>
-    <div class="example-container">
+    <div class="example-container" *ngIf="allGuests.length > 0">
       <h2>Goście do usadzenia</h2>
 
       <div cdkDropList [cdkDropListData]="allGuests" class="example-list" (cdkDropListDropped)="drop($event)">
@@ -190,9 +190,7 @@
       <h2>Lewy kwadratowy 1</h2>
 
       <div cdkDropList [cdkDropListData]="leftSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of leftSqare1; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
+        <div class="example-box" *ngFor="let item of leftSqare1; let i" cdkDrag>{{item}}</div>
       </div>
       <h2>Lewy kwadratowy 2</h2>
       <div cdkDropList [cdkDropListData]="leftSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
