@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {
+  CdkDrag,
   CdkDragDrop,
+  CdkDropList,
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
@@ -93,6 +95,22 @@ export class AppComponent {
       this.rightSqare3R.length +
       this.rightSqare4.length +
       this.rightSqare4R.length;
+  }
+
+  squarePredicate(item: CdkDrag, container: CdkDropList) {
+    if (container.data.length < 4) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  circlePredicate(item: CdkDrag, container: CdkDropList) {
+    if (container.data.length < 6) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   drop(event: CdkDragDrop<any>) {
