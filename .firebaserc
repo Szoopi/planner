@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "weddingplanner-e1bbf": {
+      "hosting": {
+        "wedding-planner": [
+          "weddingplanner-e1bbf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "weddingplanner-e1bbf"
+  }
+}
