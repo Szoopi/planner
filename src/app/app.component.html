@@ -176,86 +176,170 @@
 </style>
 
 <main class="main">
-  <div cdkDropListGroup>
+  <div cdkDropListGroup class="ctn">
+    <div class="example-container">
+      <h2>Lewy kwadratowy 1</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="leftSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of leftSqare1; let i" cdkDrag>{{item}}</div>
+        </div>
+        <div cdkDropList [cdkDropListData]="leftSqare1R" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of leftSqare1R; let i" cdkDrag>{{item}}</div>
+        </div>
+      </div>
+
+      <h2>Lewy kwadratowy 2</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="leftSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare2; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="leftSqare2R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare2R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Lewy kwadratowy 3</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="leftSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare3; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="leftSqare3R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare3R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Lewy kwadratowy 4</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="leftSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare4; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="leftSqare4R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of leftSqare4R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+    </div>
+
+    <div class="example-container">
+      <h2>Środek okrągły 1</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="middleCircle1" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle1; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="middleCircle1R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle1R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Środek okrągły 2</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="middleCircle2" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle2; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="middleCircle2R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle2R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Środek okrągły 3</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="middleCircle3" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle3; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="middleCircle3R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of middleCircle3R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+    </div>
+
+    <div class="example-container">
+      <h2>Prawy kwadratowy 1</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="rightSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare1; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="rightSqare1R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare1R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Prawy kwadratowy 2</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="rightSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare2; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="rightSqare2R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare2R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Prawy kwadratowy 3</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="rightSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare3; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="rightSqare3R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare3R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+      <h2>Prawy kwadratowy 4</h2>
+      <div class="row">
+        <div cdkDropList [cdkDropListData]="rightSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare4; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+        <div cdkDropList [cdkDropListData]="rightSqare4R" class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of rightSqare4R; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+          }
+        </div>
+      </div>
+
+    </div>
     <div class="example-container" *ngIf="allGuests.length > 0">
       <h2>Goście do usadzenia</h2>
 
       <div cdkDropList [cdkDropListData]="allGuests" class="example-list" (cdkDropListDropped)="drop($event)">
         @for (item of allGuests; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-    </div>
-    <div class="example-container">
-      <h2>Lewy kwadratowy 1</h2>
-
-      <div cdkDropList [cdkDropListData]="leftSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of leftSqare1; let i" cdkDrag>{{item}}</div>
-      </div>
-      <h2>Lewy kwadratowy 2</h2>
-      <div cdkDropList [cdkDropListData]="leftSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of leftSqare2; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Lewy kwadratowy 3</h2>
-      <div cdkDropList [cdkDropListData]="leftSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of leftSqare3; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Lewy kwadratowy 4</h2>
-      <div cdkDropList [cdkDropListData]="leftSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of leftSqare4; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-    </div>
-
-    <div class="example-container">
-      <h2>Środek okrągły 1</h2>
-      <div cdkDropList [cdkDropListData]="middleCircle1" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of middleCircle1; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Środek okrągły 2</h2>
-      <div cdkDropList [cdkDropListData]="middleCircle2" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of middleCircle2; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Środek okrągły 3</h2>
-      <div cdkDropList [cdkDropListData]="middleCircle3" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of middleCircle3; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-    </div>
-
-    <div class="example-container">
-      <h2>Prawy kwadratowy 1</h2>
-
-      <div cdkDropList [cdkDropListData]="rightSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of rightSqare1; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Prawy kwadratowy 2</h2>
-      <div cdkDropList [cdkDropListData]="rightSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of rightSqare2; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Prawy kwadratowy 3</h2>
-      <div cdkDropList [cdkDropListData]="rightSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of rightSqare3; track item) {
-        <div class="example-box" cdkDrag>{{item}}</div>
-        }
-      </div>
-      <h2>Prawy kwadratowy 4</h2>
-      <div cdkDropList [cdkDropListData]="rightSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (item of rightSqare4; track item) {
         <div class="example-box" cdkDrag>{{item}}</div>
         }
       </div>
