@@ -177,8 +177,10 @@
 
 <main class="main">
   <div cdkDropListGroup class="ctn">
+    <h2>Wypełnione miejsca: {{currentFilledPlaces()}} / 100 (lub 106)</h2>
+
     <div class="example-container">
-      <h2>Lewy kwadratowy 1</h2>
+      <h3>Lewy kwadratowy 1 ({{leftSqare1.length + leftSqare1R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="leftSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
           <div class="example-box" *ngFor="let item of leftSqare1; let i" cdkDrag>{{item}}</div>
@@ -188,7 +190,7 @@
         </div>
       </div>
 
-      <h2>Lewy kwadratowy 2</h2>
+      <h3>Lewy kwadratowy 2 ({{leftSqare2.length + leftSqare2R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="leftSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of leftSqare2; track item) {
@@ -202,7 +204,7 @@
         </div>
       </div>
 
-      <h2>Lewy kwadratowy 3</h2>
+      <h3>Lewy kwadratowy 3 ({{leftSqare3.length + leftSqare3R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="leftSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of leftSqare3; track item) {
@@ -216,7 +218,7 @@
         </div>
       </div>
 
-      <h2>Lewy kwadratowy 4</h2>
+      <h3>Lewy kwadratowy 4 ({{leftSqare4.length + leftSqare4R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="leftSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of leftSqare4; track item) {
@@ -233,7 +235,7 @@
     </div>
 
     <div class="example-container">
-      <h2>Środek okrągły 1</h2>
+      <h3>Śr okrągły 1 ({{middleCircle1.length + middleCircle1R.length}} / 10-12)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="middleCircle1" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of middleCircle1; track item) {
@@ -247,7 +249,7 @@
         </div>
       </div>
 
-      <h2>Środek okrągły 2</h2>
+      <h3>Śr okrągły 2 ({{middleCircle2.length + middleCircle2R.length}} / 10-12)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="middleCircle2" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of middleCircle2; track item) {
@@ -261,7 +263,7 @@
         </div>
       </div>
 
-      <h2>Środek okrągły 3</h2>
+      <h3>Śr okrągły 3 ({{middleCircle3.length + middleCircle3R.length}} / 10-12)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="middleCircle3" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of middleCircle3; track item) {
@@ -278,7 +280,7 @@
     </div>
 
     <div class="example-container">
-      <h2>Prawy kwadratowy 1</h2>
+      <h3>Lewy kwadratowy 1 ({{rightSqare1.length + rightSqare1R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="rightSqare1" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of rightSqare1; track item) {
@@ -292,7 +294,7 @@
         </div>
       </div>
 
-      <h2>Prawy kwadratowy 2</h2>
+      <h3>Lewy kwadratowy 2 ({{rightSqare2.length + rightSqare2R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="rightSqare2" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of rightSqare2; track item) {
@@ -306,7 +308,7 @@
         </div>
       </div>
 
-      <h2>Prawy kwadratowy 3</h2>
+      <h3>Lewy kwadratowy 3 ({{rightSqare3.length + rightSqare3R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="rightSqare3" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of rightSqare3; track item) {
@@ -320,7 +322,7 @@
         </div>
       </div>
 
-      <h2>Prawy kwadratowy 4</h2>
+      <h3>Lewy kwadratowy 4 ({{rightSqare4.length + rightSqare4R.length}} / 8)</h3>
       <div class="row">
         <div cdkDropList [cdkDropListData]="rightSqare4" class="example-list" (cdkDropListDropped)="drop($event)">
           @for (item of rightSqare4; track item) {
@@ -336,7 +338,7 @@
 
     </div>
     <div class="example-container" *ngIf="allGuests.length > 0">
-      <h2>Goście do usadzenia</h2>
+      <h2>Goście do usadzenia: {{allGuests.length}}</h2>
 
       <div cdkDropList [cdkDropListData]="allGuests" class="example-list" (cdkDropListDropped)="drop($event)">
         @for (item of allGuests; track item) {

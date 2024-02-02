@@ -70,6 +70,31 @@ export class AppComponent {
     db.list('plan/rightSqare4R').valueChanges().subscribe(list => this.rightSqare4R = [...list as string[]]);
   }
 
+  currentFilledPlaces() {
+    return this.leftSqare1.length +
+      this.leftSqare1R.length +
+      this.leftSqare2.length +
+      this.leftSqare2R.length +
+      this.leftSqare3.length +
+      this.leftSqare3R.length +
+      this.leftSqare4.length +
+      this.leftSqare4R.length +
+      this.middleCircle1.length +
+      this.middleCircle1R.length +
+      this.middleCircle2.length +
+      this.middleCircle2R.length +
+      this.middleCircle3.length +
+      this.middleCircle3R.length +
+      this.rightSqare1.length +
+      this.rightSqare1R.length +
+      this.rightSqare2.length +
+      this.rightSqare2R.length +
+      this.rightSqare3.length +
+      this.rightSqare3R.length +
+      this.rightSqare4.length +
+      this.rightSqare4R.length;
+  }
+
   drop(event: CdkDragDrop<any>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
