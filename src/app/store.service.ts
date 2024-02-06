@@ -13,7 +13,7 @@ export class StoreService {
     const db = getDatabase();
     set(ref(db, 'plan'), {
       allGuests: plan.allGuests,
-      declined: plan.declined,
+      declined: plan.allGuests,
       leftSqare1: plan.leftSqare1,
       leftSqare1R: plan.leftSqare1R,
       leftSqare2: plan.leftSqare2,
@@ -22,6 +22,8 @@ export class StoreService {
       leftSqare3R: plan.leftSqare3R,
       leftSqare4: plan.leftSqare4,
       leftSqare4R: plan.leftSqare4R,
+      leftSqare5: plan.leftSqare5,
+      leftSqare5R: plan.leftSqare5R,
       middleCircle1: plan.middleCircle1,
       middleCircle1R: plan.middleCircle1R,
       middleCircle2: plan.middleCircle2,
@@ -35,7 +37,9 @@ export class StoreService {
       rightSqare3: plan.rightSqare3,
       rightSqare3R: plan.rightSqare3R,
       rightSqare4: plan.rightSqare4,
-      rightSqare4R: plan.rightSqare4R
+      rightSqare4R: plan.rightSqare4R,
+      rightSqare5: plan.rightSqare5,
+      rightSqare5R: plan.rightSqare5R
     });
   }
 }
