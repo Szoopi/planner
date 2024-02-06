@@ -165,8 +165,8 @@ export class AppComponent {
       rightSqare3R: this.rightSqare3R,
       rightSqare4: this.rightSqare4,
       rightSqare4R: this.rightSqare4R,
-      rightSqare5: this.rightSqare4,
-      rightSqare5R: this.rightSqare4R
+      rightSqare5: this.rightSqare5,
+      rightSqare5R: this.rightSqare5R
     }
     this.store.writePlanData(plan);
   }
