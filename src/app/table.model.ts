@@ -1,5 +1,6 @@
 export interface Plan {
   allGuests: string[];
+  declined: string[];
   leftSqare1: string[];
   leftSqare1R: string[];
   leftSqare2: string[];
@@ -8,6 +9,8 @@ export interface Plan {
   leftSqare3R: string[];
   leftSqare4: string[];
   leftSqare4R: string[];
+  leftSqare5: string[];
+  leftSqare5R: string[];
   middleCircle1: string[];
   middleCircle1R: string[];
   middleCircle2: string[];
@@ -22,4 +25,6 @@ export interface Plan {
   rightSqare3R: string[];
   rightSqare4: string[];
   rightSqare4R: string[];
+  rightSqare5: string[];
+  rightSqare5R: string[];
 }
