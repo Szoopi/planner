@@ -149,7 +149,7 @@ export class AppComponent {
       leftSqare3R: this.leftSqare3R,
       leftSqare4: this.leftSqare4,
       leftSqare4R: this.leftSqare4R,
-      leftSqare5: this.leftSqare4,
+      leftSqare5: this.leftSqare5,
       leftSqare5R: this.leftSqare5R,
       middleCircle1: this.middleCircle1,
       middleCircle1R: this.middleCircle1R,
