@@ -149,7 +149,7 @@ export class AppComponent {
       leftSqare3R: this.leftSqare3R,
       leftSqare4: this.leftSqare4,
       leftSqare4R: this.leftSqare4R,
-      leftSqare5: this.leftSqare4,
+      leftSqare5: this.leftSqare5,
       leftSqare5R: this.leftSqare5R,
       middleCircle1: this.middleCircle1,
       middleCircle1R: this.middleCircle1R,
@@ -165,8 +165,8 @@ export class AppComponent {
       rightSqare3R: this.rightSqare3R,
       rightSqare4: this.rightSqare4,
       rightSqare4R: this.rightSqare4R,
-      rightSqare5: this.rightSqare4,
-      rightSqare5R: this.rightSqare4R
+      rightSqare5: this.rightSqare5,
+      rightSqare5R: this.rightSqare5R
     }
     this.store.writePlanData(plan);
   }
