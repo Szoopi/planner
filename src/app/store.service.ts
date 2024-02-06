@@ -13,6 +13,7 @@ export class StoreService {
     const db = getDatabase();
     set(ref(db, 'plan'), {
       allGuests: plan.allGuests,
+      declined: plan.declined,
       leftSqare1: plan.leftSqare1,
       leftSqare1R: plan.leftSqare1R,
       leftSqare2: plan.leftSqare2,
