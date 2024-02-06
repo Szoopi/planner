@@ -20,6 +20,7 @@ export class AppComponent {
   title = 'wedding-planner';
 
   allGuests: string[] = [];
+  declined: string[] = [];
   leftSqare1: string[] = [];
   leftSqare1R: string[] = [];
   leftSqare2: string[] = [];
@@ -28,6 +29,8 @@ export class AppComponent {
   leftSqare3R: string[] = [];
   leftSqare4: string[] = [];
   leftSqare4R: string[] = [];
+  leftSqare5: string[] = [];
+  leftSqare5R: string[] = [];
   middleCircle1: string[] = [];
   middleCircle1R: string[] = [];
   middleCircle2: string[] = [];
@@ -42,10 +45,13 @@ export class AppComponent {
   rightSqare3R: string[] = [];
   rightSqare4: string[] = [];
   rightSqare4R: string[] = [];
+  rightSqare5: string[] = [];
+  rightSqare5R: string[] = [];
 
 
   constructor(private store: StoreService, db: AngularFireDatabase) {
     db.list('plan/allGuests').valueChanges().subscribe(list => this.allGuests = [...list as string[]]);
+    db.list('plan/declined').valueChanges().subscribe(list => this.declined = [...list as string[]]);
     db.list('plan/leftSqare1').valueChanges().subscribe(list => this.leftSqare1 = [...list as string[]]);
     db.list('plan/leftSqare1R').valueChanges().subscribe(list => this.leftSqare1R = [...list as string[]]);
     db.list('plan/leftSqare2').valueChanges().subscribe(list => this.leftSqare2 = [...list as string[]]);
@@ -54,6 +60,8 @@ export class AppComponent {
     db.list('plan/leftSqare3R').valueChanges().subscribe(list => this.leftSqare3R = [...list as string[]]);
     db.list('plan/leftSqare4').valueChanges().subscribe(list => this.leftSqare4 = [...list as string[]]);
     db.list('plan/leftSqare4R').valueChanges().subscribe(list => this.leftSqare4R = [...list as string[]]);
+    db.list('plan/leftSqare5').valueChanges().subscribe(list => this.leftSqare5 = [...list as string[]]);
+    db.list('plan/leftSqare5R').valueChanges().subscribe(list => this.leftSqare5R = [...list as string[]]);
     db.list('plan/middleCircle1').valueChanges().subscribe(list => this.middleCircle1 = [...list as string[]]);
     db.list('plan/middleCircle1R').valueChanges().subscribe(list => this.middleCircle1R = [...list as string[]]);
     db.list('plan/middleCircle2').valueChanges().subscribe(list => this.middleCircle2 = [...list as string[]]);
@@ -68,6 +76,8 @@ export class AppComponent {
     db.list('plan/rightSqare3R').valueChanges().subscribe(list => this.rightSqare3R = [...list as string[]]);
     db.list('plan/rightSqare4').valueChanges().subscribe(list => this.rightSqare4 = [...list as string[]]);
     db.list('plan/rightSqare4R').valueChanges().subscribe(list => this.rightSqare4R = [...list as string[]]);
+    db.list('plan/rightSqare5').valueChanges().subscribe(list => this.rightSqare5 = [...list as string[]]);
+    db.list('plan/rightSqare5R').valueChanges().subscribe(list => this.rightSqare5R = [...list as string[]]);
   }
 
   currentFilledPlaces() {
@@ -79,6 +89,8 @@ export class AppComponent {
       this.leftSqare3R.length +
       this.leftSqare4.length +
       this.leftSqare4R.length +
+      this.leftSqare5.length +
+      this.leftSqare5R.length +
       this.middleCircle1.length +
       this.middleCircle1R.length +
       this.middleCircle2.length +
@@ -92,7 +104,9 @@ export class AppComponent {
       this.rightSqare3.length +
       this.rightSqare3R.length +
       this.rightSqare4.length +
-      this.rightSqare4R.length;
+      this.rightSqare4R.length +
+      this.rightSqare5.length +
+      this.rightSqare5R.length;
   }
 
   drop(event: CdkDragDrop<any>) {
@@ -108,6 +122,7 @@ export class AppComponent {
     }
     const plan: Plan = {
       allGuests: this.allGuests,
+      declined: this.declined,
       leftSqare1: this.leftSqare1,
       leftSqare1R: this.leftSqare1R,
       leftSqare2: this.leftSqare2,
@@ -116,6 +131,8 @@ export class AppComponent {
       leftSqare3R: this.leftSqare3R,
       leftSqare4: this.leftSqare4,
       leftSqare4R: this.leftSqare4R,
+      leftSqare5: this.leftSqare4,
+      leftSqare5R: this.leftSqare5R,
       middleCircle1: this.middleCircle1,
       middleCircle1R: this.middleCircle1R,
       middleCircle2: this.middleCircle2,
@@ -129,7 +146,9 @@ export class AppComponent {
       rightSqare3: this.rightSqare3,
       rightSqare3R: this.rightSqare3R,
       rightSqare4: this.rightSqare4,
-      rightSqare4R: this.rightSqare4R
+      rightSqare4R: this.rightSqare4R,
+      rightSqare5: this.rightSqare4,
+      rightSqare5R: this.rightSqare4R
     }
     this.store.writePlanData(plan);
   }
